@@ -13,11 +13,17 @@
 #
 #	Answer: 
 ############################################
-a,b,c = 1,2,3
+def solve():
+	for a in range(2,334):
+		for b in range(3,500):
+			for c in range(4,501):
+				if ((a+b+c) == 1000) and (a**2)+(b**2) == (c**2):
+					print(a*b*c)
+					#print(a,b,c)
+					return
+				pass
+			pass
+		pass
+	pass
 
-def play():
-	for a in range(1,333):
-
-# a can be anywhere from 1 - 333
-# b can be anywhere from 2 - 499
-# c can be ahywhere from 3 - 500
+solve()
