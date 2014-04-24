@@ -20,15 +20,24 @@
 #
 #	Answer: 76576500, the triangle number of 12375
 #######################################
+
+# Returns the triangle number for a given number
 def tri(n):
+	
+	# The formula for any given triangle number is (n * (n+1)) / 2
 	return int((n*(n+1))/2)
 
+# Returns the number of divisors a given number, n has
 def countDivisors(n):
 	count = 1
 	if (n == 1):
 		return 1
 	for i in range(2,int(n**0.5) + 1):
+	
+		# if the number is a divisor, add 1 to count
 		count += {True: 1, False: 0}[n % i == 0]
+	
+	# return count*2 to account for the matching divisors not counted
 	return count*2
 
 seek = True
@@ -37,4 +46,6 @@ while (seek):
 	if (countDivisors(tri(i)) > 500):
 		break
 	i += 1
+
+# print winning triangle number
 print(tri(i))
