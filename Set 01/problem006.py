@@ -15,7 +15,7 @@
 #	Find the difference between the sum of the squares of the first one 
 #		hundred natural numbers and the square of the sum.
 #
-#	Answer: 232792560
+#	Answer: 25164150
 ############################################
 def solveIt(n):
 	sum1 = sum2 = 0
