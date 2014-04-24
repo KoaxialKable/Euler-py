@@ -10,15 +10,7 @@
 #	Answer: 142913828922
 ############################################
 sum = 2
-def isPrime(n):
-	if (n==2):
-		return True
-	if (n < 2) or (n % 2 == 0):
-		return False
-	return not any(n % i == 0 for i in range(3,int(n**0.5) + 1, 2))
-
 for i in range(3,2000000,2):
-	# ternary expression.  if prime, add i to sum. if not, add 0
-	sum += {True: i, False: 0}[isPrime(i)]
-	
+	sum += {True: i, False: 0}[i % 2 == 0]
+	sum += {True: 0, False: i}[any(i % j == 0 for j in range(3, int(i**0.5) + 1, 2))]
 print(sum)
