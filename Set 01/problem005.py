@@ -8,15 +8,32 @@
 #
 #	What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 #
-#	Answer: 
+#	Answer: 232792560
 ############################################
-n = 400
-while True:
-	for i in range(2,21):
-		if (n%i!=0):
-			n += 1
-			continue
-	if (i == 21)
-		break
+def isPrime(n):
+	for i in range(2,n):
+		if (n%i==0):
+			return False
+	return True
 
-print(n)
+def getBase(r):git@github.com:KoaxialKable/Euler-py.git
+	base = 1
+	for i in range (1,r+1):
+		if (isPrime(i)):
+			base *= i
+	return base
+
+def findIt(n):
+	foundIt = False
+	guess = base = getBase(n)
+	while not foundIt:
+		for i in range(2,n+1):
+			if(guess%i!=0):
+				guess += base
+				break
+			if (i==n):
+				return guess
+
+#print(findIt(10))
+print('Answer:',findIt(20))
+#print(fintId(30))
