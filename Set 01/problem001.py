@@ -10,8 +10,19 @@
 #	Answer: 233168
 ############################################
 
+# sum will hold the sum of all found multiples of 3 and 5
 sum = 0
+
+# Iterate the value of n from 1 to 999
 for n in range(1,1000):
+	
+	# Check to see if n is divisible by 3 or 5
 	if (n%3==0) or (n%5==0):
+	
+		# If yes, add n to sum
 		sum += n
+		
+	pass
+	
+# Print resulting sum
 print(sum)

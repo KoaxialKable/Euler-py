@@ -12,10 +12,24 @@
 #
 #	Answer: 4613732
 ############################################
+
+# Initialize sum to 0, a to 1, and b to 2
+# sum will hold the sum of even-values terms we find
+# a and b are instruments to creating the Fibonacci series
 sum,a,b = 0,1,2
+
+# Create numbers in the Fibonacci sequence until the value of a passes 4,000,000
 while (a <= 4000000):
-	#print(a)
+
+	# Create Fibonacci series
 	if (a%2==0):
+	
+		# Add the value of a to our sum
 		sum += a
+	
+	# the new value of a becomes the old value of b
+	# b becomes the sum of a and b, thus extending the Fibonacci series
 	a,b = b,a+b
+	
+# Print resulting sum
 print(sum)

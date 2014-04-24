@@ -14,6 +14,12 @@ def isPrime(n):
 		return True
 	if (n < 2) or (n % 2 == 0):
 		return False
+	
+	# any() returns True if any element of the iterable is true and false if it is false
+	# here, if (n % i == 0) [true], indicating evenly divisible and thus not prime,
+	# the result will be false.  It iterates between 3 and the integer form of the square root
+	# of n, because if it's not divisible by any number smaller than its own square root, it's prime.
+	# It only evaluates odd numbers because we already checked for divisibility by 2, above.
 	return not any(n % i == 0 for i in range(3,int(n**0.5) + 1, 2))
 
 def nthPrime(n):
