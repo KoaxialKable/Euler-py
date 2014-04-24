@@ -11,6 +11,5 @@
 ############################################
 sum = 2
 for i in range(3,2000000,2):
-	sum += {True: i, False: 0}[i % 2 == 0]
 	sum += {True: 0, False: i}[any(i % j == 0 for j in range(3, int(i**0.5) + 1, 2))]
 print(sum)
