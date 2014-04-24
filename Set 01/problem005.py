@@ -16,7 +16,7 @@ def isPrime(n):
 			return False
 	return True
 
-def getBase(r):git@github.com:KoaxialKable/Euler-py.git
+def getBase(r):
 	base = 1
 	for i in range (1,r+1):
 		if (isPrime(i)):
@@ -35,5 +35,6 @@ def findIt(n):
 				return guess
 
 #print(findIt(10))
-print('Answer:',findIt(20))
 #print(fintIt(30))
+print('Answer:',findIt(20))
+
