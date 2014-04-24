@@ -36,4 +36,4 @@ def findIt(n):
 
 #print(findIt(10))
 print('Answer:',findIt(20))
-#print(fintId(30))
+#print(fintIt(30))
