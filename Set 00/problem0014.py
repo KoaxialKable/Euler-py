@@ -19,24 +19,22 @@
 #
 #	Answer: 837799
 ############################################
-counter = []
+counter = 0
 number = 0
 length = 0
 
 def Collatz(num):
-	counter.append(num)
+	counter = 1
 	while num != 1:
 		if num % 2 == 0:
 			num = int(num / 2)
 		else:
 			num = 3*num + 1
-		counter.append(num)
-	counter.append(1)
+		counter = counter + 1
 
-for i in range (1, 1000000): # 1-13
+for i in range (500001, 1000000, 2): # 1-13
 	Collatz(i)
-	if (len(counter) > length):
-		length = len(counter)
+	if (counter > length):
+		length = counter
 		number = i
-	counter = []
 print('{}: {}'.format(number, length))
