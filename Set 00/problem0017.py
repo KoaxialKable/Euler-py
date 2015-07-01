@@ -15,7 +15,7 @@
 import time
 
 index   = [0,3,3,5,4,4,3,5,5,4]
-teendex = [0,6,6,8,8,7,7,9,8,8]
+teendex = [3,6,6,8,8,7,7,9,8,8]
 tendex  = [0,3,6,6,5,5,5,7,6,6]
 
 def convert(n):
@@ -23,10 +23,7 @@ def convert(n):
 		return index[n]
 	elif len(str(n)) == 2:
 		if n < 20:
-			if (n == 10):
-				return 3
-			else:
-				return teendex[n-10]
+			return teendex[n-10]
 		else:
 			return( tendex[int(str(n)[0])] + convert(int(str(n)[1])))
 	elif len(str(n)) == 3:
@@ -43,3 +40,4 @@ total = sum(convert(i) for i in range(1, 1001))
 elapsed = time.time() - start
 
 print('found {} in {} seconds'.format(total, elapsed))
+
