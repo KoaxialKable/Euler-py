@@ -7,9 +7,14 @@
 #	
 #	What is the sum of the digits of the number 2^1000?
 #
-#	Answer: 
+#	Answer: 1366
 ############################################
-sum = 0
-for char in str(2**1000):
-	sum += int(char)
-print(sum)
+#	My first solution
+#
+# total = 0
+# for char in str(2**1000):
+# 	total += int(char)
+# print(total)
+############################################
+#	More pythonic solution
+print(sum(int(digit) for digit in str(2**1000)))
